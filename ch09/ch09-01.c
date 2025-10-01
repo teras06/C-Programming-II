@@ -1,59 +1,21 @@
-/*
-   문제 : 레코드를 입력받아 필드를 구분하여 구조체 배열에 저장한 후 출력
-   레코드 형식 : 이름 | 학번 | 학과 | 학년(정수)
-   입력 종료 조건 : "exit" 입력
-*/
+/* 파일명: ch09-01.c
 
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+ * 내용: 예제 9-1. 문자 배열의 선언 및 초기화
 
-typedef struct student {
-	char name[24];
-	char id[16];
-	char major[32];
-	int year;
-} STUDENT;
+ * 작성자: 김영재
 
-void Print(void);
+ * 학번: 202511211
 
-int main()
+ * 날짜: 2025.09.30
+ */
+
+typedef struct contact {
+	char name[20];
+	char phone[20];
+	int ringtone;
+};
+
+int main(void)
 {
-	Print();
 
-	return 0;
-}
-
-void Print(void)
-{
-	STUDENT human[10];
-
-    int i = 0;
-
-	while (1)
-	{
-	    printf("이름을 입력하세요: ");
-        scanf("%s", &human[i].name);
-
-		if (strcmp(human[i].name, "exit") == 0)
-		{
-			break;
-		}
-
-		printf("학번을 입력하세요: ");
-		scanf("%s", &human[i].id);
-		printf("학과를 입력하세요: ");
-		scanf("%s", &human[i].major);
-		printf("학년을 입력하세요: ");
-		scanf("%d", &human[i].year);
-
-		int j = 0;
-		for (j = 0; j < i + 1; j++)
-		{
-	        printf("%s %s %s %d\n", human[j].name, human[j].id, human[j].major, human[j].year);
-		}
-
-		i++;
-	}
-
-	return;
 }
