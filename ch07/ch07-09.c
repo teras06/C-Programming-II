@@ -12,7 +12,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int main()
+int main(void)
 {
 	int deta[] = { 78, 34, 52, 15, 63, 15, 25 };
 	int size;
