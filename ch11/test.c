@@ -5,7 +5,7 @@
 #include "function.h"
 
 //extern int get_id(void);   #include "function.h" 작성으로 선언 필요없이 사용가능
-//extern int last_id;
+//extern int last_id;   static int last_id = 1000; 선언으로 전역변수 선언 X
 
 int main(int argc, char* argv[])
 {
